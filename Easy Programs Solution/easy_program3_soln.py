@@ -8,14 +8,14 @@ class Solution:
         triangle = [[1]]
         
         for i in range(1, numRows):
-            prev_row = triangle[-1]
-            current_row = [1]
+            prev = triangle[-1]
+            current = [1]
             
             for j in range(1, i):
-                current_row.append(prev_row[j - 1] + prev_row[j])
+                current.append(prev[j - 1] + prev[j])
             
-            current_row.append(1)
-            triangle.append(current_row)
+            current.append(1)
+            triangle.append(current)
         
         return triangle
 
