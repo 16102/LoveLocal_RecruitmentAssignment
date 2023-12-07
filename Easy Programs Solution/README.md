@@ -22,6 +22,11 @@ solution = Solution()
 result = solution.lengthOfLastWord(txt)
 print(result)
 ```
+**Example Usage Output:**
+```
+txt = "Hello World"
+output = 5
+```
 <p><strong>Explanation of the code:</strong></p>
 <p>
 This code implements a simple algorithm for finding the length of the last word in a string:
@@ -47,11 +52,7 @@ This code implements a simple algorithm for finding the length of the last word 
 * Time Complexity: O(n) where n is the length of the string. This is due to the string operations involved.
 * Space Complexity: O(n) due to the creation of the `strList` which stores the individual words.
 
-**Example Usage Output:**
-```
-txt = "Hello World"
-output = 5
-```
+
 
 </p>
 
@@ -93,6 +94,12 @@ print("NumRows = ",numRows)
 print(result)
 
 ```
+**Example Usage Output:**
+```
+NumRows =  5
+[[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
+```
+
 <p><strong>Explanation of the code:</strong></p>
 <p>
 This code implements Pascal's triangle algorithm to generate a list containing the first n rows of the triangle.
@@ -138,11 +145,6 @@ This code implements Pascal's triangle algorithm to generate a list containing t
 * Time Complexity: O(n^2). This is due to the nested loop iterating through each element of the triangle.
 * Space Complexity: O(n^2). This is due to the storage of the entire Pascal's triangle in the `triangle` list.
 
-**Example Usage Output:**
-```
-NumRows =  5
-[[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
-```
 
 </p>
 
