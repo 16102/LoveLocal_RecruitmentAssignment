@@ -37,24 +37,24 @@ output = dcbabcd
 <p>
 This code implements an algorithm to find the longest palindrome within a given string. The key points are:
 
-**Step 1: Reverse the String**
+1. *Reverse the String*
 
 * `a = s[::-1]` creates a reversed copy of the original string `s`. This simplifies the comparison process later.
 
-**Step 2: Iterative Search**
+2. *Iterative Search*
 
 * A loop iterates through each character of the reversed string `a`, starting from the end.
 
-**Step 3: Check for Prefix Match**
+3. *Check for Prefix Match*
 
 * Inside the loop, the `s.startswith(a[i:])` condition checks if the original string `s` starts with the substring of `a` from index `i` onwards. This effectively checks if the current character and all subsequent characters in `a` are present at the beginning of `s`.
 
-**Step 4: Found Palindrome**
+4. *Found Palindrome*
 
 * If the `startswith` condition is true, it means that the reversed substring of `a` from index `i` to the end is a prefix of the original string `s`. This implies that the substring of `s` starting from the same index `i` and extending to the end is a palindrome.
 * Therefore, the function returns the concatenation of the current substring of `a` (`a[:i]`) and the original string `s`. This represents the longest palindrome found so far.
 
-**Step 5: No Palindrome Found**
+5. *No Palindrome Found*
 
 * If no prefix match is found throughout the loop, the function reaches the end of the reversed string. This indicates that no palindrome was found within the original string.
 * In such cases, the function simply returns the concatenation of the reversed string `a` and the original string `s`. This effectively combines the original string with its reversed version, which cannot be further extended to a longer palindrome.
@@ -114,7 +114,7 @@ output = 6
 <p>
 This code implements an algorithm to count the total number of occurrences of the digit "1" across all decimal representations of numbers from 1 to n (inclusive).
 
-**Step 1: Base Case and Initialization**
+1. *Base Case and Initialization*
 
 * If `n <= 0`, it implies the range is empty, and no "1"s exist. The function returns 0 in this case.
 * Otherwise, several variables are initialized:
@@ -122,20 +122,20 @@ This code implements an algorithm to count the total number of occurrences of th
     * `x`: Starts at 1 and represents the current power of 10.
     * `res`: Accumulates the total number of "1"s found throughout the loop.
 
-**Step 2: Loop through Digits**
+2. *Loop through Digits*
 
 * A loop iterates while `a > 0`, meaning there are remaining digits to analyze.
 
-**Step 3: Extract Current Digit**
+3. *Extract Current Digit*
 
 * `d = a % 10` extracts the current digit (unit digit) from `a` using modulo operation.
 
-**Step 4: Update variables**
+4. *Update variables*
 
 * `a //= 10` removes the current digit from `a` by integer division, shifting focus to higher-order digits.
 * `res += a * x` accounts for the "1"s in all numbers with higher-order digit greater than the current digit.
 
-**Step 5: Special Cases for Current Digit**
+5. *Special Cases for Current Digit*
 
 * If `d == 1`:
     * This implies the current digit is "1", directly contributing to the count.
@@ -145,11 +145,11 @@ This code implements an algorithm to count the total number of occurrences of th
     * This means the current digit is greater than "1".
     * `res += x` adds the number of "1"s contributed by all numbers within the current power of 10 (including those with a leading "1").
 
-**Step 6: Update Power of 10**
+6. *Update Power of 10*
 
 * `x *= 10` increases the power of 10 for the next iteration, focusing on higher-order digits.
 
-**Step 7: Return Result**
+7. *Return Result*
 
 * After analyzing all digits, `res` contains the total number of "1"s.
 * The function returns `res`.
