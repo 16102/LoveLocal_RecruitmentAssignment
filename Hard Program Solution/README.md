@@ -27,6 +27,12 @@ solution = Solution()
 result = solution.findPalindrome(s)
 print(result)
 ```
+**Example Usage Output:**
+```
+s = "abcd"
+output = dcbabcd
+```
+
 <p><strong>Explanation of the code:</strong></p>
 <p>
 This code implements an algorithm to find the longest palindrome within a given string. The key points are:
@@ -65,11 +71,6 @@ This code implements an algorithm to find the longest palindrome within a given 
 **Space Complexity:** O(n)
 * The algorithm primarily utilizes the reversed string `a`, which takes up space proportional to the input string length.
 
-**Example Usage Output:**
-```
-s = "abcd"
-output = dcbabcd
-```
 
 </p>
 
@@ -103,6 +104,11 @@ solution = Solution()
 result = solution.countDigitOne(n)
 print(result)
 
+```
+**Example Usage Output:**
+```
+n =  13
+output = 6
 ```
 <p><strong>Explanation of the code:</strong></p>
 <p>
@@ -160,11 +166,7 @@ This code implements an algorithm to count the total number of occurrences of th
 **Space Complexity:** O(1)
 * The algorithm uses constant space for its variables, independent of the input size.
 
-**Example Usage Output:**
-```
-n =  13
-output = 6
-```
+
 
 </p>
 
