@@ -42,26 +42,26 @@ Output: [3]
 
 This code implements Boyer-Moore voting algorithm to find all elements that appear more than `n/3` times in a given list.
 
-**Step 1: Count Elements**
+1. *Count Elements*
 
 * `Counter(nums)` creates a dictionary `element_count` where keys are unique elements in `nums` and values are their corresponding frequencies.
 
-**Step 2: Initialize Variables**
+2. *Initialize Variables*
 
 * `majority_elements` is an empty list to store the identified majority elements.
 * `threshold` is calculated as the floor division of the total elements `len(nums)` by 3. This represents the minimum count required for an element to be considered a majority element.
 
-**Step 3: Loop through Element Counts**
+3. *Loop through Element Counts*
 
 * A loop iterates through each element and its count stored in `element_count`.
 
-**Step 4: Check for Majority**
+4. *Check for Majority*
 
 * The `if` statement compares the current element's count (`count`) with the threshold.
     * If `count > threshold`, it implies the current element appears more than `n/3` times.
     * In such cases, the element is appended to the `majority_elements` list.
 
-**Step 5: Return Results**
+5. *Return Results*
 
 * After iterating through all elements, the `majority_elements` list contains all elements that satisfied the majority criteria.
 * The function returns `majority_elements`.
@@ -133,24 +133,24 @@ output = 1
 
 This code implements a dynamic programming algorithm to find the largest square submatrix with all "1"s in a binary matrix.
 
-**Step 1: Initialize Variables**
+1. *Initialize Variables*
 
 * `a`: Stores the number of rows in the matrix (`len(matrix)`)
 * `b`: Stores the number of columns in the matrix (`len(matrix[0])`)
 * `d`: Creates a 2D array of size (a+1) x (b+1) to store side lengths of squares
 * `m`: Initializes a variable to track the maximum side length
 
-**Step 2: Loop through Rows and Columns**
+2. *Loop through Rows and Columns*
 
 * A nested loop iterates through each cell in the matrix.
 * `i`: Represents the row index (0 to a-1)
 * `j`: Represents the column index (0 to b-1)
 
-**Step 3: Check Current Cell**
+3. *Check Current Cell*
 
 * The `if` statement checks if the current cell (`matrix[i][j]`) contains "1".
 
-**Step 4: Calculate Square Side Length**
+4. *Calculate Square Side Length*
 
 * If the current cell is "1", the side length of the square ending at this cell is calculated as:
     * Minimum of:
@@ -159,12 +159,12 @@ This code implements a dynamic programming algorithm to find the largest square 
         * Side length of the square ending at the diagonal cell above and left (`d[i][j]`)
     * Add 1 to account for the current cell itself
 
-**Step 5: Update Matrix and Maximum Side Length**
+5. *Update Matrix and Maximum Side Length*
 
 * The calculated side length (`d[i + 1][j + 1]`) is stored in the corresponding position of the `d` matrix.
 * The `m` variable is updated with the maximum side length encountered so far by comparing it with the newly calculated side length.
 
-**Step 6: Return Result**
+6. *Return Result*
 
 * After iterating through all cells, the `m` variable holds the side length of the largest square with all "1"s.
 * The function returns the square area (`m * m`).
