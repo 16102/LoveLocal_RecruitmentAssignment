@@ -31,23 +31,23 @@ output = 5
 <p>
 This code implements a simple algorithm for finding the length of the last word in a string:
 
-**Step 1: Removing Whitespaces using strip()**
+1. *Removing Whitespaces using strip()*
 
 * `s.strip()` removes leading and trailing whitespace from the `s` string. This ensures we only consider the actual words and not any surrounding spaces.
 
-**Step 2: Splitting String into Words using split()**
+2. *Splitting String into Words using split()*
 
 * `stripped.split(" ")` splits the string `stripped` into a list of words (`strList`) using space as the delimiter.
 
-**Step 3: Extracting the Last Word**
+3. *Extracting the Last Word*
 
 * `strList[-1]` accesses the last element of the list `strList`, which is the last word in the original string.
 
-**Step 4: Calculating the Length of the last word**
+4. *Calculating the Length of the last word*
 
 * `len(lastWord)` returns the length of the last word stored in the variable `lastWord`.
 
-**Overall Complexity:**
+*Overall Complexity:*
 
 * Time Complexity: O(n) where n is the length of the string. This is due to the string operations involved.
 * Space Complexity: O(n) due to the creation of the `strList` which stores the individual words.
@@ -104,39 +104,39 @@ NumRows =  5
 <p>
 This code implements Pascal's triangle algorithm to generate a list containing the first n rows of the triangle.
 
-**Step 1: Base Case**
+1. *Base Case*
 
 * If `numRows` is 0, an empty list is returned. This is because Pascal's triangle has no rows when n is 0.
 
-**Step 2: Initialize Triangle**
+2. *Initialize Triangle*
 
 * A list called `triangle` is initialized with a single element list containing 1. This represents the first row of the triangle.
 
-**Step 3: Loop through Rows**
+3. *Loop through Rows*
 
 * A loop iterates from 1 to `numRows` (excluding 0), generating each row of the triangle.
 
-**Step 4: Generate Current Row**
+4. *Generate Current Row*
 
 * A variable `prev` stores the previous row of the triangle.
 * An empty list called `current` is created to store the elements of the current row.
 * A single 1 (representing the first element of every row) is added to `current`.
 
-**Step 5: Calculate Inner Elements**
+5. *Calculate Inner Elements*
 
 * A nested loop iterates from 1 to the current row number (excluding 0).
 * Inside the loop, the value at the current index of the current row is calculated as the sum of the element at the same index and the element one position to the right in the previous row. This is the core logic of Pascal's triangle.
 * The calculated value is appended to the `current` list.
 
-**Step 6: Add Last Element**
+6. *Add Last Element*
 
 * Another 1 is added to the `current` list, representing the last element of the row.
 
-**Step 7: Update Triangle**
+7. *Update Triangle*
 
 * The `current` list is appended to the `triangle` list, effectively adding the newly generated row to the overall triangle.
 
-**Step 8: Return Result**
+8. *Return Result*
 
 * After all rows are generated, the `triangle` list containing the entire Pascal's triangle for the specified number of rows is returned.
 
